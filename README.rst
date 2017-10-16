@@ -1,6 +1,8 @@
-===============
-Docker-geth-dev
-===============
+==============
+Geth on Docker
+==============
+
+*My Fork, done to suit my needs. Your mileage may vary*
 
 This runs a container with private Ethereum chain with some precreated accounts
 and balances. This is inspired by the `StackOverflow thread <http://ethereum.stackexchange.com/questions/1516/how-can-i-completely-automate-a-docker-image-and-dockerfile-for-a-geth-test-netw>`_ and fixing problems encountered on the way.

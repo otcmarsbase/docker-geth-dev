@@ -1,8 +1,5 @@
 FROM ethereum/client-go
 
-# # our own custom bult geth that mines really fast
-# COPY geth /usr/bin/geth
-
 # script that invokes with all those
 # command line options
 COPY rungeth.docker /usr/bin/rungeth
@@ -14,7 +11,7 @@ COPY geth.password /root/geth.password
 COPY genesis.json  /root/genesis.json
 COPY ethereum /root/.ethereum
 
-ENTRYPOINT ["/usr/bin/rungeth"]
+ENTRYPOINT ["sh", "/usr/bin/rungeth"]
 
 # use non-standard ports so don't accidently connect to real servers
 # XXX Docker inheritance doesn't override, it extends the port      list...
