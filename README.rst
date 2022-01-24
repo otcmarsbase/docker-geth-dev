@@ -47,7 +47,7 @@ Example: check balance with RPC call
 
 You can run ``make test`` which is actually::
 
-  curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["27dc8de9e9a1cb673543bd5fce89e83af09e228f", "latest"],"id":1}' localhost:8110
+  curl -XPOST -H "Content-type: application/json" -d '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x27dc8de9e9a1cb673543bd5fce89e83af09e228f", "latest"],"id":1}' 'localhost:8110'
 
 The response should be: ::
 
