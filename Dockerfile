@@ -1,5 +1,6 @@
 FROM ethereum/client-go
 
+USER root
 # script that invokes with all those
 # command line options
 COPY rungeth.docker /usr/bin/rungeth
@@ -9,8 +10,8 @@ COPY rungeth.docker /usr/bin/rungeth
 # Note we are taking advantage of Docker's copy-on-mount feature
 COPY corsdomains.geth /root/corsdomains.geth
 COPY geth.password /root/geth.password
-COPY genesis.json  /root/genesis.json
-COPY ethereum /root/.ethereum
+# COPY genesis.json  /root/genesis.json
+#COPY ethereum /root/.ethereum/geth
 
 ENTRYPOINT ["sh", "/usr/bin/rungeth"]
 
