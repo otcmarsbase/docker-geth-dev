@@ -3,6 +3,10 @@ build:
 
 rpc:
 	docker run --name geth -d -p 8110:8110 samsheff/geth
+	sleep 2000
+	rm -rf tmp
+	docker cp geth:/tmp/ ./tmp
+	echo ./tmp/go-eth*/* | xargs cat | jq .address
 
 kill:
 	docker rm -f geth
