@@ -13,6 +13,8 @@ COPY geth.password /root/geth.password
 # COPY genesis.json  /root/genesis.json
 #COPY ethereum /root/.ethereum/geth
 
+COPY keystore /root/.ethereum/keystore
+
 ENTRYPOINT ["sh", "/usr/bin/rungeth"]
 
 # use non-standard ports so don't accidently connect to real servers
