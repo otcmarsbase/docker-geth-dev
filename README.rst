@@ -32,13 +32,16 @@ Miner address
 =============
 
 On launch the miner address will be printed. If you miss it, you can always open
-keystore file located at `./tmp/go-eth*/*` and check the miner address.
+keystore file located at ``./tmp/go-eth*/*`` and check the miner address.
 
 Sending eth
 ===========
 
 1. Get the miner address (see above)
-2. Run `make send-eth from=<miner_address> to=<receiver> value=<eth_hex_value>`
+2. Run ``make send-eth from=<miner_address> to=<receiver> value=<eth_hex_value>``
+
+Example:  
+``make send-eth from=0x8fd58fc34538603458a93b1923256e7b066e4478 to=0x60c56553495612d4b93b6BC1deffE937223eaF51 value=0x1080dccde6d3fd00``
 
 Precreated accounts
 ===================
