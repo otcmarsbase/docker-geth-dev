@@ -28,6 +28,18 @@ and balances. This is inspired by the `StackOverflow thread <http://ethereum.sta
          - "8110:8110"
 
 
+Miner address
+=============
+
+On launch the miner address will be printed. If you miss it, you can always open
+keystore file located at `./tmp/go-eth*/*` and check the miner address.
+
+Sending eth
+===========
+
+1. Get the miner address (see above)
+2. Run `make send-eth from=<miner_address> to=<receiver> value=<eth_hex_value>`
+
 Precreated accounts
 ===================
 
